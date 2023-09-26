@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>digital clock</title>
+    <link rel="stylesheet" href="./clock.css">
+</head>
+<body>
+    <div id="clock" class="dclock">
+        
+    </div>
+</body>
+<script>
+    function getTime() {
+        let date = new Date()
+        console.log(date);
+        let hours = date.getHours()
+        console.log(hours);
+        let min = date.getMinutes()
+        console.log(min);
+        let sec = date.getSeconds()
+        console.log(sec);
+
+        clock.innerHTML = `${hours}:${min}:${sec}`
+
+        setTimeout(()=>{ getTime()},1000)
+    }
+    getTime()
+</script>
+</html>
